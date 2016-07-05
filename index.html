@@ -83,7 +83,7 @@
                 <div class="c ami">
                     <div class="gj">
                         <div class="ars">
-                            <h1 class="aqg apd">927</h1>
+                            <h1 class="aqg apd">944</h1>
                             <span class="aqh">Downloads</span>
                         </div>
                     </div>
@@ -97,7 +97,7 @@
                 <div class="c vc">
                     <div class="gj ah">
                         <div class="ars">
-                            <h1 class="aqg apd">307</h1>
+                            <h1 class="aqg apd">314</h1>
                             <span class="aqh">Stars</span>
                         </div>
                     </div>
@@ -222,54 +222,108 @@
         <img src="img/iphone-reverse-perspective.jpg" class="u" data-transition="entrance">
     </div>
 </div>
+
 <div class="k aou amt amq amr">
-    <div id="carousel-example-generic-2" class="carousel dr slide" data-ride="carousel">
+    <div id="screenshots" class="carousel dr slide" data-ride="carousel">
         <ol class="carousel-indicators">
-            <li data-target="#carousel-example-generic-2" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-example-generic-2" data-slide-to="1"></li>
+            <li data-target="#screenshots" data-slide-to="0" class="active"></li>
+            <li data-target="#screenshots" data-slide-to="1"></li>
+            <li data-target="#screenshots" data-slide-to="2"></li>
+            <li data-target="#screenshots" data-slide-to="3"></li>
+            <li data-target="#screenshots" data-slide-to="4"></li>
         </ol>
         <div class="ea" role="listbox">
+
             <div class="item active">
                 <div class="k">
                     <div class="e">
                         <div class="c">
                             <div class="gs kj">
                                 <p class="ak amb eq">
-                                    Integrate with GitHub, Twitter and Facebook to take advantage of everything 
-                                    Canvas has to offer with its dynamic social profile features.
+                                    Keep your blog administration secure by utilizing Laravel's built-in authentication drivers enhanced
+                                    with JavaScript validation by <a href="https://github.com/proengsoft/laravel-jsvalidation" target="_blank">Proengsoft</a>.
                                 </p>
                             </div>
                         </div>
-                        <img class="dy amk p" src="img/iphone-flat-profile.jpg">
+                        <img class="dy amk p screen" src="img/sign-in.jpg" width="750" style="margin: 0 auto">
                     </div>
                 </div>
             </div>
+
             <div class="item">
                 <div class="k">
                     <div class="e">
                         <div class="c">
                             <div class="gs kj">
                                 <p class="ak amb eq">
-                                    A better experience with every touch. Canvas is custom tailored to fit on any and
-                                    every device on the market. Let your fingers do the talking.
+                                    Integrate with GitHub, Twitter and Facebook to take advantage of everything Canvas has to offer with its dynamic social profile features.
                                 </p>
                             </div>
                         </div>
-                        <img class="dy amk p" src="img/iphone-flat-uploads.jpg">
+                        <img class="dy amk p screen" src="img/profile.jpg" width="750" style="margin: 0 auto">
                     </div>
                 </div>
             </div>
+
+            <div class="item">
+                <div class="k">
+                    <div class="e">
+                        <div class="c">
+                            <div class="gs kj">
+                                <p class="ak amb eq">
+                                    Create and edit your content with the power of <a href="http://summernote.org" target="_blank">Summernote</a>, an elegant WYSIWYG editor designed for desktop or mobile users.
+                                </p>
+                            </div>
+                        </div>
+                        <img class="dy amk p screen" src="img/edit-post.jpg" width="750" style="margin: 0 auto">
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="k">
+                    <div class="e">
+                        <div class="c">
+                            <div class="gs kj">
+                                <p class="ak amb eq">
+                                    Manage your image library by creating your own folder structure and uploading files or images.
+                                    Preview each image and use them in blog posts.
+                                </p>
+                            </div>
+                        </div>
+                        <img class="dy amk p screen" src="img/upload.jpg" width="750" style="margin: 0 auto">
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="k">
+                    <div class="e">
+                        <div class="c">
+                            <div class="gs kj">
+                                <p class="ak amb eq">
+                                    Display your blog content in a clean and unobtrusive way with Canvas by using Markdown,
+                                    images and the <a href="https://disqus.com" target="_blank">Disqus</a> commenting system.
+                                </p>
+                            </div>
+                        </div>
+                        <img class="dy amk p screen" src="img/post.jpg" width="750" style="margin: 0 auto">
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <a class="left ua" href="#carousel-example-generic-2" role="button" data-slide="prev">
+        <a class="left ua" href="#screenshots" role="button" data-slide="prev">
             <span class="a vk" aria-hidden="true"></span>
             <span class="ee">Previous</span>
         </a>
-        <a class="right ua" href="#carousel-example-generic-2" role="button" data-slide="next">
+        <a class="right ua" href="#screenshots" role="button" data-slide="next">
             <span class="a vl" aria-hidden="true"></span>
             <span class="ee">Next</span>
         </a>
     </div>
 </div>
+
 <div class="k s">
     <div class="e">
         <div class="c">
@@ -310,9 +364,20 @@
         </div>
     </div>
 </div>
-<script src="js/jquery.min.js"></script>
-<script src="js/toolkit.js"></script>
-<script src="js/application.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/toolkit.js"></script>
+<script type="text/javascript" src="js/application.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".carousel").swiperight(function() {
+            $(this).carousel('prev');
+        });
+        $(".carousel").swipeleft(function() {
+            $(this).carousel('next');
+        });
+    });
+</script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

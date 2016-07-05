@@ -8,6 +8,18 @@
  overflow: hidden;
 }
 
+.ui-loader {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .carousel-indicators {
+    margin-bottom: -45px !important;
+  }
+  .screen {
+    padding-top: 25px !important;
+  }
+}
 
 /* navbar */
 .app-navbar {
