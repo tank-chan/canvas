@@ -365,19 +365,32 @@
     </div>
 </div>
 <script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript">
+     if (jQuery) {
+        (function ($, undefined) {
+
+            'use strict';
+
+            $(function () {
+                main();
+            });
+
+            function main() {
+                $(document).ready(function() {
+                    $(".carousel").swiperight(function() {
+                        $(this).carousel('prev');
+                    });
+                    $(".carousel").swipeleft(function() {
+                        $(this).carousel('next');
+                    });
+                });
+            }
+        })(jQuery);
+     }
+</script>
 <script type="text/javascript" src="js/toolkit.js"></script>
 <script type="text/javascript" src="js/application.js"></script>
-<script type="text/javascript" src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-<script type="text/javascript">
-    $(document).ready(function() {
-        $(".carousel").swiperight(function() {
-            $(this).carousel('prev');
-        });
-        $(".carousel").swipeleft(function() {
-            $(this).carousel('next');
-        });
-    });
-</script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
