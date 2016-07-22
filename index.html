@@ -90,7 +90,7 @@
                     </div>
                     <div class="gj">
                         <div class="ars">
-                            <h1 class="aqg apd">9</h1>
+                            <h1 class="aqg apd" id="repo_open_issues"></h1>
                             <span class="aqh">Open Issues</span>
                         </div>
                     </div>
@@ -98,13 +98,13 @@
                 <div class="c vc">
                     <div class="gj ah">
                         <div class="ars">
-                            <h1 class="aqg apd">491</h1>
+                            <h1 class="aqg apd" id="repo_stars"></h1>
                             <span class="aqh">Stars</span>
                         </div>
                     </div>
                     <div class="gj ah">
                         <div class="ars">
-                            <h1 class="aqg apd">57</h1>
+                            <h1 class="aqg apd" id="repo_forks"></h1>
                             <span class="aqh">Forks</span>
                         </div>
                     </div>
@@ -384,6 +384,12 @@
                     });
                     $(".carousel").swipeleft(function() {
                         $(this).carousel('next');
+                    });
+
+                    $.get('https://api.github.com/repos/austintoddj/Canvas', function ( res ) {
+                    	$('#repo_open_issues').html(res.open_issues);
+                    	$('#repo_stars').html(res.stargazers_count);
+                    	$('#repo_forks').html(res.forks_count);
                     });
                 });
             }
