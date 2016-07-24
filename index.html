@@ -84,7 +84,7 @@
                 <div class="c ami">
                     <div class="gj">
                         <div class="ars">
-                            <h1 class="aqg apd">1.7k</h1>
+                            <h1 class="aqg apd" id="repo_downloads_count">1.7k</h1>
                             <span class="aqh">Downloads</span>
                         </div>
                     </div>
@@ -367,6 +367,7 @@
 </div>
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript" src="js/numerals.min.js"></script>
 <script type="text/javascript">
      if (jQuery) {
         (function ($, undefined) {
@@ -386,11 +387,23 @@
                         $(this).carousel('next');
                     });
 
-                    $.get('https://api.github.com/repos/austintoddj/Canvas', function ( res ) {
-                    	$('#repo_open_issues').html(res.open_issues);
-                    	$('#repo_stars').html(res.stargazers_count);
-                    	$('#repo_forks').html(res.forks_count);
+                    $.get('https://packagist.org/packages/austintoddj/canvas/downloads.json', function(res){
+                        var downloads_total = res.package.downloads.total.total;
+                        $('#repo_downloads_count').html(format_quantity(downloads));
                     });
+
+                    $.get('https://api.github.com/repos/austintoddj/Canvas', function ( res ) {
+                        $('#repo_open_issues').html(format_quantity(res.open_issues));
+                        $('#repo_stars').html(format_quantity(res.stargazers_count));
+                        $('#repo_forks').html(format_quantity(res.forks_count));
+                    });
+
+                    function format_quantity(quantity){
+                        if(quantity > 999){
+                            return numeral(quantity).format('0.0a');
+                        }
+                        return quantity;
+                    };
                 });
             }
         })(jQuery);
