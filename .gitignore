@@ -10,3 +10,8 @@ Homestead.json
 .project
 Thumbs.db
 composer.lock
+
+
+/public
+/storage
+/bootstrap

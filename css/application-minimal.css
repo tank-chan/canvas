@@ -4,6 +4,10 @@
  * copyright @colossal 2015
  */
 
+.s-img {
+  width: 80%;
+}
+
 .k {
  overflow: hidden;
 }
@@ -18,6 +22,9 @@
   }
   .screen {
     padding-top: 25px !important;
+  }
+  .s-img {
+    width: 95%;
   }
 }
 
