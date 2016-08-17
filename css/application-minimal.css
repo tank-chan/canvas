@@ -28,7 +28,8 @@
     padding-top: 25px !important;
   }
   .sp-img {
-    margin: 0 15px 15px 30px;
+    margin:  10px auto;
+    padding: 5px;
   }
 }
 
