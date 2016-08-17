@@ -4,8 +4,12 @@
  * copyright @colossal 2015
  */
 
-.s-img {
-  width: 80%;
+.sp-amf {
+  margin-bottom: 0 !important;
+}
+
+.sp-img {
+  margin: 0 30px 30px 30px;
 }
 
 .k {
@@ -23,8 +27,8 @@
   .screen {
     padding-top: 25px !important;
   }
-  .s-img {
-    width: 95%;
+  .sp-img {
+    margin: 0 15px 15px 30px;
   }
 }
 
