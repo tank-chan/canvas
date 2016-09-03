@@ -59,7 +59,7 @@
 }
 @media (max-width: 480px) {
   .p {
-    transform: scale(1.5) !important;
+    transform: scale(1) !important;
   }
 }
 
