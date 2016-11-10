@@ -34,6 +34,9 @@
 @stop
 
 @section('unique-js')
+    @if (config("duoshuo.enabled"))
+        @include('frontend.blog.partials.duoshuo')
+    @endif
     <script src="{{ asset('js/frontend.js') }}" charset="utf-8"></script>
 @endsection
 
@@ -63,6 +66,9 @@
 
                     @include('frontend.blog.partials.author')
 
+                    @if (config("duoshuo.enabled"))
+                        <div class="ds-thread" data-thread-key="{{$post->id}}" data-title="{{$post->title}}" data-url="{{\Request::fullUrl()}}"></div>
+                    @endif
                 </div>
             </div>
         </div>
